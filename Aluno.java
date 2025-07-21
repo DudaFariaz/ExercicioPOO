@@ -10,29 +10,17 @@ public class Aluno extends Pessoa {
     Aluno           (String nome, 
                     int idade, 
                     String dataNascimento, 
-                    String raca, 
+                    int cep, 
                     String curso,
                     String turma,
                     String turno){
- // acesso ao método construtor pai (*livro)
-        super(nome, idade, dataNascimento, raca);
+ // acesso ao método construtor pai (*pessoa)
+        super(nome, idade, dataNascimento, cep);
         this.curso = curso;
         this.turma = turma;
         this.turno = turno;
     }
 
-    public String getNome(){
-        return this.nome;
-    }
-    public int getIdade(){
-        return this.idade;
-    }
-    public String getDataNascimento(){
-        return this.dataNascimento;
-    }
-    public int getCep(){
-        return this.cep;
-    }
     public String getCurso(){
         return this.curso;
     }
@@ -43,15 +31,6 @@ public class Aluno extends Pessoa {
         return this.turno;
     }
 
-    public void setNome(String nome){
-        this.nome = nome;
-    }
-    public void setIdade(int idade){
-        this.idade = idade;
-    }
-    public void setDataNascimento(String dataNascimento){
-        this.dataNascimento = dataNascimento;
-    }
     public void setCurso(String curso){
         this.curso = curso;
     }
@@ -62,19 +41,22 @@ public class Aluno extends Pessoa {
         this.turno = turno;
     }
 
-
+    @Override
     public void Falar(){
-        System.out.println("Estou falando...");
+        System.out.println("Estou falando com o colega...");
     }
 
+    @Override
     public void Conversar(){
-        System.out.println("Estou conversando...");
+        System.out.println("Estou conversando com o colega..");
     }
 
+    @Override
     public void Ouvir(){
-        System.out.println("Estou ouvindo...");
+        System.out.println("Estou ouvindo o professor...");
     }
 
+    
     public void Estudar(){
         System.out.println("Estou estudando...");
     }

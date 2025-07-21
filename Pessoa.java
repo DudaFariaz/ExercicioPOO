@@ -6,6 +6,7 @@ public class Pessoa {
     private int cep;
 
     // método construtor (construir objetos com valores default)
+    
     Pessoa(){
         this.nome = "";
         this.idade = 0;
